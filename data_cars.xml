@@ -1,0 +1,80 @@
+<Cars>
+	<Car>
+		<ModelName>Škoda Oktávia</ModelName>
+		<SaleDate>2010-12-02</SaleDate>
+		<Price>500000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Felicia</ModelName>
+		<SaleDate>2000-12-03</SaleDate>
+		<Price>210000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Fabia</ModelName>
+		<SaleDate>2010-12-04</SaleDate>
+		<Price>350000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Oktávia</ModelName>
+		<SaleDate>2010-12-04</SaleDate>
+		<Price>500000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Oktávia</ModelName>
+		<SaleDate>2010-12-05</SaleDate>
+		<Price>500000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Fabia</ModelName>
+		<SaleDate>2010-12-05</SaleDate>
+		<Price>350000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Fabia</ModelName>
+		<SaleDate>2010-12-06</SaleDate>
+		<Price>350000</Price>
+		<Tax>20</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Forman</ModelName>
+		<SaleDate>2000-12-04</SaleDate>
+		<Price>100000</Price>
+		<Tax>19</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Favorit</ModelName>
+		<SaleDate>2000-12-05</SaleDate>
+		<Price>80000</Price>
+		<Tax>19</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Forman</ModelName>
+		<SaleDate>2000-12-06</SaleDate>
+		<Price>100000</Price>
+		<Tax>19</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Felicia</ModelName>
+		<SaleDate>2000-12-03</SaleDate>
+		<Price>210000</Price>
+		<Tax>19</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Felicia</ModelName>
+		<SaleDate>2000-12-02</SaleDate>
+		<Price>210000</Price>
+		<Tax>19</Tax>
+	</Car>
+	<Car>
+		<ModelName>Škoda Oktávia</ModelName>
+		<SaleDate>2010-12-07</SaleDate>
+		<Price>500000</Price>
+		<Tax>20</Tax>
+	</Car>
+</Cars>
