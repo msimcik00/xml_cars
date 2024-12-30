@@ -1,0 +1,84 @@
+﻿<Window x:Class="xml_cars.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xml_cars"
+        mc:Ignorable="d"
+        Title="Aplikace" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="100 15"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005A9E" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="CanUserResizeColumns" Value="False"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Name="LoadXMLButton"
+                    Content="Načíst XML soubor"
+                    Click="LoadXMLButton_Click"
+                    ToolTip="Vyberte XML soubor pro načtení dat."/>
+
+            <DataGrid x:Name="CarsDataGrid"
+                      Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Název modelu" Binding="{Binding ModelName}" Width="*"/>
+                    <DataGridTextColumn Header="Datum prodeje" Binding="{Binding SaleDate, StringFormat=d.M.yyyy}" Width="*"/>
+                    <DataGridTextColumn Header="Cena" Binding="{Binding Price}" Width="*"/>
+                    <DataGridTextColumn Header="DPH" Binding="{Binding Tax}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Column="1" IsEnabled="False" x:Name="WeekendSalesGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="CalculateWeekendSalesButton"
+                    Content="Vypočítat"
+                    Click="CalculateWeekendSalesButton_Click"
+                    ToolTip="Pro každý model sečte celkovou cenu vozů prodaných o víkendu a vypočítá celkovou cenu s DPH."
+             />
+
+            <DataGrid Name="WeekendSalesDataGrid"
+                      Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Název modelu" Binding="{Binding ModelName}" Width="*" />
+                    <DataGridTextColumn Header="Cena bez DPH" Binding="{Binding TotalPrice}" Width="*"/>
+                    <DataGridTextColumn Header="Cena s DPH" Binding="{Binding TotalPriceWithTax}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>
